@@ -5,8 +5,13 @@ casino_blacklist = ["Robin Bobin", "Varvara Dorn", "Olga Vasukova", "Igor Petrov
 poker_blacklist = ["Alex Bobin", "Vera Dorn", "Olga Lashukova", "Igor Petrov"]
 alcohol_blacklist = ["Vanya Rodin", "Klara Bebach", "Ira Vlasova", "Igor Petrov"]
 
-casino_poker = set(casino_blacklist + poker_blacklist)
+casino_blacklist = set(casino_blacklist)
+poker_blacklist = set(poker_blacklist)
 alcohol_blacklist = set(alcohol_blacklist)
-winner = casino_poker.intersection(alcohol_blacklist)
 
-print("The winner is " + str(winner))
+winner_1 = casino_blacklist.intersection(poker_blacklist)
+winner_2 = casino_blacklist.intersection(alcohol_blacklist)
+winner_3 = poker_blacklist.intersection(alcohol_blacklist)
+
+
+print(winner_1, winner_2, winner_3)
